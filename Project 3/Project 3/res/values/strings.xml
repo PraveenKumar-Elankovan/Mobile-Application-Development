@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"> Top 10 Summer Vacations</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="usa"> USA - Usono / Appalachia/ Alleghany</string>
+    <string name="india"> India - Bharata / Hindustan / Aryavarta </string>
+    <string name="china"> China - Zhongguo / Zhonghua  </string>
+    <string name="status">Status</string>
+    <string name="todo">todo</string>
+    <string name="hello_">Hello!!</string>
+
+</resources>
+

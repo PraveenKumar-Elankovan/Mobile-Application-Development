@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:background="@android:color/darker_gray">
+   
+       <TextView
+      
+       android:layout_width="wrap_content"
+       android:layout_height="10dp"
+       android:textColor="@android:color/white"
+       android:textSize="20sp" /> 
+       
+   <TextView
+       android:id="@+id/usa"
+       android:background="@android:color/darker_gray"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:clickable="true"
+       android:focusable="true"
+       android:onClick="usa"
+       android:text="@string/usa"
+       android:textColor="@android:color/black"
+       android:textSize="20sp" />
+   
+      <TextView
+      
+       android:layout_width="wrap_content"
+       android:layout_height="10dp"
+       android:textColor="@android:color/white"
+       android:textSize="20sp" /> 
+   
+   <TextView
+   android:id="@+id/india"
+   android:background="@android:color/darker_gray"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:text="@string/india"
+   android:textColor="@android:color/black"
+   android:textSize="20sp"               
+   android:clickable="true" 
+   android:onClick="india"/>
+   
+      <TextView
+      
+       android:layout_width="wrap_content"
+       android:layout_height="10dp"
+       android:textColor="@android:color/darker_gray"
+       android:textSize="20sp" /> 
+   
+   <TextView
+   android:id="@+id/china"
+   android:layout_width="fill_parent"
+   android:background="@android:color/darker_gray"
+   android:layout_height="wrap_content"
+   android:text="@string/china"
+   android:textColor="@android:color/black"
+   android:textSize="20sp"                 
+   android:clickable="true"
+   android:onClick="china"/>
+
+   
+      <TextView
+      
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@android:color/black"
+       android:textSize="20sp" /> 
+   
+   <Button
+       android:id="@+id/button"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+      	android:textSize="25sp"
+       android:text="@string/status" 
+       />
+   
+   </LinearLayout>

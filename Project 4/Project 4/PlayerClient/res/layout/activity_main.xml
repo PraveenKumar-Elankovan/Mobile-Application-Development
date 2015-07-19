@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.examples.Services.MusicClient.MainActivity" >
+
+    <Button
+        android:id="@+id/song1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/song1" />
+
+        <Button
+        android:id="@+id/song2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/song2"
+        android:layout_below="@+id/song1" />
+
+    <Button
+        android:id="@+id/song3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/song3"
+        android:layout_below="@+id/song2" />
+   
+    <TextView 
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/song3"/>
+    
+    <Button
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log"
+        android:layout_below="@+id/tv" />
+      
+     
+                      <TextView 
+        android:id="@+id/tv5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/log"/>
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv5"
+        android:background="@drawable/stop"
+        
+       />
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv5"
+        android:background="@drawable/pause"
+     
+         />
+
+</RelativeLayout>

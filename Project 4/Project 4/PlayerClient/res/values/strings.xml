@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicBox</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="song1">Song 1</string>
+    <string name="song2">Song 2</string>
+    <string name="song3">Song 3</string>
+    <string name="log">Log</string>
+    <string name="title_activity_transactions">Transactions</string>
+ 
+</resources>
