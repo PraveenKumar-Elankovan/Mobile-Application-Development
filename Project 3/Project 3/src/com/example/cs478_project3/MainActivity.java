@@ -1,7 +1,5 @@
 package com.example.cs478_project3;
 
-
-
 import com.example.cs478_project3.R;
 
 import android.content.Context;
@@ -15,9 +13,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class MainActivity extends FragmentActivity {
-	
+
 	TextView textview1;
 	TextView textview2;
 	TextView textview3;
@@ -26,8 +23,9 @@ public class MainActivity extends FragmentActivity {
 	GridFragment mGridFragment1 = new GridFragment();
 	GridFragment mGridFragment2 = new GridFragment();
 	GridFragment mGridFragment3 = new GridFragment();
-//	String array definition containing URLs for the images to be displayed on clicking the first section 
-	private String[] USA = new String[]{
+	// String array definition containing URLs for the images to be displayed on
+	// clicking the first section
+	private String[] USA = new String[] {
 			"http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/12/2/top-10-family-spring-break-vacations-atlantis.jpg.rend.tccom.616.462.jpeg",
 			"http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/12/2/top-10-family-spring-break-vacations-snowbird-lodge.jpg.rend.tccom.616.462.jpeg",
 			"http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2013/02/15/7c/top-10-family-vacation-spots-tanque-verde-ranch-2.rend.tccom.616.462.jpeg",
@@ -37,11 +35,11 @@ public class MainActivity extends FragmentActivity {
 			"http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2014/12/2/top-10-family-spring-break-vacations-treesort.jpg.rend.tccom.616.462.jpeg",
 			"http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2013/02/14/b8/top-10-family-vacation-spots-la-costa.rend.tccom.616.462.jpeg",
 			"http://travelchannel.sndimg.com/content/dam/images/travel/fullset/2013/02/14/15/top-10-family-vacation-spots-animal-kingdom.rend.tccom.616.462.jpeg",
-			"http://www.wickedgoodtraveltips.com/wp-content/uploads/2013/10/Great-Smoky-Mountains-National-Park-Tennessee.jpg"
-			};
-	
-//	String array definition containing URLs for the images to be displayed on clicking the second section
-	private String[] India = new String[]{
+			"http://www.wickedgoodtraveltips.com/wp-content/uploads/2013/10/Great-Smoky-Mountains-National-Park-Tennessee.jpg" };
+
+	// String array definition containing URLs for the images to be displayed on
+	// clicking the second section
+	private String[] India = new String[] {
 			"http://siliconindia.com:81/travelcity/images/special_images/ga69Z4z2rf5mAdn.jpeg",
 			"http://www.formertourist.com/wp-content/uploads/2013/09/honeymoon-in-kerala.jpg",
 			"http://1p6ep31f32pvjrml246jyq31.wpengine.netdna-cdn.com/wp-content/uploads/2011/03/Top-10-places-to-visit-in-India-img-041.jpg",
@@ -51,11 +49,11 @@ public class MainActivity extends FragmentActivity {
 			"http://ordiate.com/wp-content/uploads/2013/03/Tunnel-No.-103-Shimla.jpeg",
 			"http://traveljee.com/wp-content/uploads/2014/03/shillong_lake.jpg",
 			"http://static.topyaps.com/wp-content/uploads/2012/07/Andaman-and-Nicobar.jpeg",
-			"http://www.transindiatravels.com/wp-content/uploads/howrah-bridge.jpg"
-			};
-	
-//	String array definition containing URLs for the images to be displayed on clicking the third section
-	private String[] China = new String[]{
+			"http://www.transindiatravels.com/wp-content/uploads/howrah-bridge.jpg" };
+
+	// String array definition containing URLs for the images to be displayed on
+	// clicking the third section
+	private String[] China = new String[] {
 			"http://www.izi-travel.com/wp-content/uploads/2013/03/China1.jpg",
 			"http://www.mawista.com/blog/wp-content/uploads/2013/11/china.jpg",
 			"http://greatinspire.com/wp-content/uploads/2013/06/rice-worker-china.jpg",
@@ -65,100 +63,94 @@ public class MainActivity extends FragmentActivity {
 			"http://usa.chinadaily.com.cn/travel/attachement/png/site1/20130710/30f9edf0b4801347082d23.png",
 			"http://easyscienceforkids.com/wp-content/uploads/2014/02/Easy-Science-Kids-Facts-about-the-Top-10-Hottest-Places-on-Earth-the-Flaming-Mountains-in-China.jpg",
 			"http://img.amerikanki.com/wp-content/uploads/2014/08/Most_Beautiful_Places_in_China.jpg",
-			"http://usa.chinadaily.com.cn/travel/attachement/jpg/site1/20130726/002564bc654b135c1d740c.jpg"
-			};
-
-	
-
+			"http://usa.chinadaily.com.cn/travel/attachement/jpg/site1/20130726/002564bc654b135c1d740c.jpg" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-//		Binding from the textviews from the XML file
-		textview1 = (TextView)findViewById(R.id.usa);
-		textview2 = (TextView)findViewById(R.id.india);
-		textview3 = (TextView)findViewById(R.id.china);
-		button = (Button)findViewById(R.id.button);
-//		binding the fragments through frameLayout
-		frameLayout = (FrameLayout)findViewById(R.id.change_frag); 
+		// Binding from the textviews from the XML file
+		textview1 = (TextView) findViewById(R.id.usa);
+		textview2 = (TextView) findViewById(R.id.india);
+		textview3 = (TextView) findViewById(R.id.china);
+		button = (Button) findViewById(R.id.button);
+		// binding the fragments through frameLayout
+		frameLayout = (FrameLayout) findViewById(R.id.change_frag);
+		// Setting up the listener to the text view to update the fragment 2
 		textview1.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				Bundle bundle = new Bundle();
-//				On clicking the elements in the first fragment, secong fragments to be initialised
+				// On clicking the elements in the first fragment, second
+				// fragments to be initialised
 				FragmentManager fm = getSupportFragmentManager();
 				FragmentTransaction ft = fm.beginTransaction();
 				bundle.putStringArray("images", USA);
-				if(mGridFragment1.getArguments()!= null){
+				if (mGridFragment1.getArguments() != null) {
 					mGridFragment1.getArguments().putAll(bundle);
-					
-				}else{
+
+				} else {
 					mGridFragment1.setArguments(bundle);
 				}
-				
-				
-				ft.replace(R.id.change_frag,mGridFragment1,"GRID_VIEW_FRAG");
+
+				ft.replace(R.id.change_frag, mGridFragment1, "GRID_VIEW_FRAG");
 				ft.commit();
 			}
 		});
-		
-	
-		
+
+		// Set a click listener to update the fragment 2
 		textview2.setOnClickListener(new View.OnClickListener() {
-		
-			
+
 			@Override
 			public void onClick(View v) {
 				Bundle bundle = new Bundle();
-				
+
 				FragmentManager fm = getSupportFragmentManager();
 				FragmentTransaction ft = fm.beginTransaction();
 				bundle.putStringArray("images", India);
-				if(mGridFragment2.getArguments()!= null){
+				if (mGridFragment2.getArguments() != null) {
 					mGridFragment2.getArguments().putAll(bundle);
-				}else{
+				} else {
 					mGridFragment2.setArguments(bundle);
 				}
-				
-				
-				ft.replace(R.id.change_frag,mGridFragment2,"GRID_VIEW_FRAG");
+
+				ft.replace(R.id.change_frag, mGridFragment2, "GRID_VIEW_FRAG");
 				ft.commit();
 			}
 		});
-		
+		// Set a click listener to update the fragment 2
 		textview3.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 
 				Bundle bundle = new Bundle();
-				
+
 				FragmentManager fm = getSupportFragmentManager();
 				FragmentTransaction ft = fm.beginTransaction();
 				bundle.putStringArray("images", China);
-				if(mGridFragment3.getArguments()!= null){
+				if (mGridFragment3.getArguments() != null) {
 					mGridFragment3.getArguments().putAll(bundle);
-					
-				}else{
+
+				} else {
 					mGridFragment3.setArguments(bundle);
 				}
-				
-				
-				ft.replace(R.id.change_frag,mGridFragment3,"GRID_VIEW_FRAG");
-				
-				//ft.addToBackStack(null);
+
+				ft.replace(R.id.change_frag, mGridFragment3, "GRID_VIEW_FRAG");
+
+				// ft.addToBackStack(null);
 				ft.commit();
 			}
 		});
-		
+		// Bind listener to the status buttom
 		button.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				boolean x,y,a,b,p,q;
+				boolean x, y, a, b, p, q;
 				ImageAdapter im = new ImageAdapter();
+				// Assign visibility of the grid fragments
 				x = mGridFragment1.isVisible();
 				y = mGridFragment1.isVisib();
 				a = mGridFragment2.isVisible();
@@ -166,29 +158,28 @@ public class MainActivity extends FragmentActivity {
 				p = mGridFragment3.isVisible();
 				q = mGridFragment3.isVisib();
 				Context context = getApplicationContext();
-				
+
+				// Setting up a toast message showing the current status
 				CharSequence text = null;
 				int duration = Toast.LENGTH_LONG;
-				if(im.status() != null && im.status() == "running"){
+				if (im.status() != null && im.status() == "running") {
 					text = "downloading";
-				}
-				else{
-					if((x==true || a== true || p == true) && (y==false || b==false || q==false)){
+				} else {
+					if ((x == true || a == true || p == true)
+							&& (y == false || b == false || q == false)) {
 						text = "Showing downloaded thumbnails";
-					}else if((x == false || a==false || p==false) && (y == true||b==true||q==true)){
+					} else if ((x == false || a == false || p == false)
+							&& (y == true || b == true || q == true)) {
 						text = "Showing selected picture";
-					}else{
+					} else {
 						text = "idle";
 					}
 				}
-				
-				
-				
+
 				final Toast toast = Toast.makeText(context, text, duration);
 				toast.show();
 			}
 		});
 	}
 
-	
 }
