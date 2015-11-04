@@ -1,12 +1,7 @@
-•	It is an android application containing two fragments. 
-•	The first fragment contains a 3-item list of topics of your choice to be displayed (e.g., animals, flowers, cars, landscapes, people, etc.) and a status button. 
-•	The second fragment is initially empty. When a user selects one of the items in the first fragment, the application must download at least 6 pictures in the selected topic. 
-•	For instance, if the topic is “flowers” the application should download six pictures of flowers from the web. 
-•	The status button displays a short toast message indicating the current status of the application (e.g., “idle”, “downloading pictures”, “showing downloaded thumbnails”, and “showing selected picture”).
-•	This button would not be blocked (it should still be responsive) while the pictures are downloaded.
-•	Once the six pictures are downloaded, appropriately scaled (and possibly cropped) versions of the pictures are displayed in a table layout contained in the second fragment. 
-•	The user may select one of the six pictures, by clicking on the picture, in which case the entire fragment display is replaced with the picture.
-•	The two fragments should be displayed on top of each other (with the list fragment above the picture fragment) when the device is in portrait mode and side-by-side (with the list fragment to the left of the picture fragment) when the device is in landscape mode. 
-•	Configuration changes should be handled seamlessly (i.e., the picture fragment should not “lose” its pictures while it is rotated.) 
-•	Finally, fragment events (e.g., switching from the table view of thumbnails to the full view of a single picture) should be recorded in the back stack. 
-•	Either way, the first fragment takes about 25-35% of the device’s display with the picture fragment taking the remaining portion of the device’s display.
+It is an android application containing two fragments. The first fragment contains a 3-item list of touring locations to be displayed (USA, India, China) and a status button. The second fragment is initially empty. When a user selects one of the locations in the first fragment, the application must download at least 6 pictures from the selected location.
+                   
+The status button displays a short toast message indicating the current status of the application (e.g., “idle”, “downloading pictures”, “showing downloaded thumbnails”, and “showing selected picture”). This button would not be blocked (it should still be responsive) while the pictures are downloaded.
+                   
+Once the six pictures are downloaded, appropriately scaled (and possibly cropped) version of the pictures are displayed in a table layout contained in the second fragment. The user may select one of the six pictures, by clicking on the picture, in which case the entire fragment display is replaced with the picture.
+
+The two fragments are displayed on top of each other (with the list fragment above the picture fragment) when the device is in portrait mode and side-by-side (with the list fragment to the left of the picture fragment) when the device is in landscape mode. Either way, the first fragment takes about 25-35% of the device’s display with the picture fragment taking the remaining portion of the device’s display.
